@@ -7,6 +7,7 @@ import time
 
 import bosdyn.client
 import bosdyn.client.util
+from bosdyn.client.image import ImageClient
 from bosdyn.client.robot_state import RobotStateClient
 from bosdyn.api.robot_state_pb2 import KinematicState, RobotState, RobotMetrics, JointState
 import os
@@ -24,6 +25,7 @@ class RobotConnection:
         self.robot = self.sdk.create_robot(spot.hostname)
         self.robot.authenticate(spot.username, spot.password)
         self.robot_state_client = self.robot.ensure_client(RobotStateClient.default_service_name)
+        self.image_client = self.robot.ensure_client(ImageClient.default_service_name)
 
 
 class RobotStates:
