@@ -1,0 +1,5 @@
+spot:
+  hostname: # Wifi Spot IP address
+  username: # spot username
+  password: # username password
+  app_token: ~/.bosdyn/dev.app_token # e.g. "~/.bosdyn/dev.app_token"

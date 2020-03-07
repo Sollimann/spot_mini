@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "spot_mini"
+version = "0.1.0"
+description = ""
+authors = ["sollimann <kristoffer.solberg@cognite.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pyyaml = "^5.3"
+opencv-python = "^4.2.0"
+dacite = "^1.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
