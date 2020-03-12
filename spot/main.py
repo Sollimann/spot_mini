@@ -22,7 +22,7 @@ def main():
         time.sleep(1)
 
     try:
-        cmd = RobotCommand(connection)
+        #cmd = RobotCommand(connection)
         vision = RobotVision(connection)
     except:
         logger.exception("Could not establish lease")

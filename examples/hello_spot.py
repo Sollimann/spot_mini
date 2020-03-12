@@ -61,13 +61,13 @@ def hello_spot(config):
     # controlling the robot, it should return the lease so other clients can
     # control it. Note that the lease is returned as the "finally" condition in this
     # try-catch-finally block.
-    lease_client = robot.ensure_client(bosdyn.client.lease.LeaseClient.default_service_name)
+    lease_client = robot.ensure_client(bosdyn.client.lease.LeaseClient.default_service_name)   
     lease = lease_client.acquire()
     try:
         with bosdyn.client.lease.LeaseKeepAlive(lease_client), bosdyn.client.estop.EstopKeepAlive(
                 estop_endpoint):
             # Now, we are ready to power on the robot. This call will block until the power
-            # is on. Commands would fail if this did not happen. We can also check that the robot is
+            # is on. Commands would fail if this did not happen. We    can also check that the robot is
             # powered at any point.
             robot.logger.info("Powering on robot... This may take a several seconds.")
             robot.power_on(timeout_sec=20)
